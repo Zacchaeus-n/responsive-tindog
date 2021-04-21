@@ -15,6 +15,9 @@ h6 {
 p {
   color: #030303;
 }
+.error {
+  background-color: red;
+}
 
 /* Containers */
 .container-fluid {
@@ -186,5 +189,16 @@ p {
   .title-image {
     position: static;
     transform: rotate(0);
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-label-group > label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
   }
 }
